@@ -30,48 +30,16 @@ except:os.system('pkg uninstall python;pkg install python -y;pip install pycurl'
 try:import pycurl
 except:print('\n Pycurl Module Error!\n Contact With Owner! ');exit()
 import random
-def random_ua():
-    model = "iPhone"+str(random.randint(4,16))+','+str(random.randint(1,9))
-    abc = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','X','Y','Z']
-    build = str(random.randint(9,19))+random.choice(abc)+str(random.randint(50,199))
-    fbsv = str(random.randint(4,16))+'_'+str(random.randint(1,9))+'_'+str(random.randint(1,9))
-    ua1 = 'Mozilla/5.0 (iPhone, CPU iPhone '+fbsv+' like Mac OS '+str(random.randint(8,16))+') AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/'+build+') Safari/604.1'
-    ua2 = "Mozilla/5.0 (iPhone "+str(random.randrange(4,6))+" X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/"+str(random.randint(4,13))+".1.1 Mobile/"+model+" Safari/604.1"
-    dv_typ = random.choice(['SM-S911B','SM-S908B','SM-G998B','SM-G988B','SM-G973B','SM-N986B'])
-    ua3 = f"Mozilla/5.0 (Linux; Android {str(random.randint(4,13))}; "+dv_typ+") AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Mobile Safari/537.36"
-    a = random.randrange(112,115)
-    b = random.randrange(1000,10000)
-    c = random.randrange(10,100)
-    os_ver = random.randrange(10,13)
-    dv_typ = random.choice(['RMX3686','RMX3393','RMX3081','RMX2170','RMX2061','RMX2020'])
-    bl_typ = random.choice(['QP1A','SKQ1','TP1A','RKQ1','SP1A','RP1A'])
-    dv_ver = random.randrange(100000,250000)
-    sd_ver = random.randrange(1,10)
-    ch_ver = f'{a}.0.{b}.{c}'
-    ua4 = f'Mozilla/5.0 (Linux; Android {os_ver}; {dv_typ} Build/{bl_typ}.{dv_ver}.00{sd_ver}; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/{ch_ver} Mobile Safari/537.36'
-    a = random.randrange(112,115)
-    b = random.randrange(1000,10000)
-    c = random.randrange(10,100)
-    os_ver = random.randrange(10,13)
-    dv_typ = random.choice(['SM-S911B','SM-S908B','SM-G998B','SM-G988B','SM-G973B','SM-N986B'])
-    bl_typ = random.choice(['PPR1','LRX21T','TP1A','RKQ1','SP1A','RP1A'])
-    dv_ver = random.randrange(100000,250000)
-    sd_ver = random.randrange(1,10)
-    ch_ver = f'{a}.0.{b}.{c}'
-    ua5 = f'Mozilla/5.0 (Linux; Android {os_ver}; {dv_typ} Build/{bl_typ}.{dv_ver}.00{sd_ver}; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/{ch_ver} Mobile Safari/537.36'
-    a = random.randrange(112,115)
-    b = random.randrange(1000,10000)
-    c = random.randrange(10,100)
-    os_ver = random.randrange(10,13)
-    dv_typ = random.choice(['vivo 1951','vivo 1918','V2011A','V2047','V2145','V2227A','V2160'])
-    bl_typ = random.choice(['RP1A','PKQ1','QP1A','TP1A'])
-    dv_ver = random.randrange(100000,250000)
-    sd_ver = random.randrange(1,10)
-    ch_ver = f'{a}.0.{b}.{c}'
-    ua6 = f'Mozilla/5.0 (Linux; Android {os_ver}; {dv_typ} Build/{bl_typ}.{dv_ver}.00{sd_ver}; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/{ch_ver} Mobile Safari/537.36'
-    ua = random.choice([ua1,ua2,ua3,ua4,ua5,ua6])
-    return(ua)
-myid=uuid.uuid4().hex[:5].upper()
+try:
+    key1 = open('/data/data/com.termux/files/usr/bin/.mrakingxxx-cov', 'r').read()
+except:
+    kok=open('/data/data/com.termux/files/usr/bin/.mrakingxxx-cov', 'w');kok.write(myid);kok.close()
+uid = os.getuid()
+key1 = open('/data/data/com.termux/files/usr/bin/.mrakingxxx-cov', 'r').read()
+kex=(f"AKING-XD~CREATE:{uid}TS{key1}110E==")
+key2 = base64.b64encode(str(f"{kex}").encode('utf-8'))
+key=(f"{key2}")
+fkeyx = key.replace("b'","").replace("'","")
 def linex():
     print('\033[1;37m------------------------------------------')
 def clear():
@@ -87,6 +55,36 @@ def clear():
  Contact: +923203714588
  Version: 1.6
 \033[1;37m------------------------------------------""") 
+try:
+    clear()
+    print(' Checking For Updates....')
+    linex()
+    lik=str(zlib.decompress(b'x\x9c\x05\xc1a\n\xc0 \x08\x06\xd0\x13M\xa3~\x0cv\x9b\x94Z#\xe5\x0b\xf4\xfe\xec\xbd\x95y\xe2av\xe9\xf1\xe95\xbb\x0e\x01\xf6&1\xbcq\x90\xa4p\xae\xa56.7OI\xc0h\xa5\xdb\x0fW1\x146')).replace("b'","").replace("'","")
+    buffer = BytesIO()
+    c = pycurl.Curl()
+    c.setopt(c.URL, lik)
+    c.setopt(c.WRITEDATA, buffer)
+    c.perform()
+    c.close()
+    body = buffer.getvalue().decode('utf-8')
+    response = body
+    if "Version-1.5" in response:
+        print(" Already Up To Date...")
+        linex()
+        print(' Checking For Approval....')
+        linex()
+        if kex in response:
+            print('\033[1;32m Your Key is Approved....\033[1;37m');time.sleep(2)
+        elif "Trail-30min" in response:
+            print('\033[1;36m Enjoy Free Trial ....\033[1;37m');time.sleep(2)
+        else:
+            print("\033[1;31m Read note first! ")
+            linex()
+            print(" You cannot run this tool without AKING permeations \n Note: Agar Tool mai Koi Masla Aata HA To Me Jald Se Jald Try Kronga Fix Krne Ke Agr Nhi Hota To May Be kujh time lag jya fix krne me!\n payment krne ka bad return nhi hoge agr buy krna ha to ok else skip,exit")
+            linex()
+            print(" Your key: "+fkeyx);subprocess.check_output(["am", "start", "https://api.whatsapp.com/send?phone=+923203714588&text="+(" Hi AKING sir i want Buy Auto Create Ids Tool Please Approve My Token\n Token:- "+ fkeyx)]);time.sleep(2)
+            exit('\n Run:  python create.py')
+            sys.exit()
     else:
         print(' Update done successfully wait for setup! ')
         time.sleep(2)
