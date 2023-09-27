@@ -1,21 +1,4 @@
-#🙃F*cked Lking By Me
-# Script Meri thi bs iske hath pata nai kese lag gayi
 
-
-W = '\x1b[1;37m'
-G = '\x1b[1;32m'
-R = '\x1b[1;91m'
-S = '\x1b[1;36m'
-B = '\x1b[1;34m'
-Y = '\x1b[1;33m'
-P = '\x1b[1;35m'
-cnt=0
-cp=0
-ok=0
-ok1=0
-loop=0
-died=0
-live=0
 import os,sys,time,re,uuid,base64,zlib,subprocess
 from concurrent.futures import  ThreadPoolExecutor as tpe
 try:
