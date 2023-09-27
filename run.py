@@ -72,16 +72,6 @@ def random_ua():
     ua = random.choice([ua1,ua2,ua3,ua4,ua5,ua6])
     return(ua)
 myid=uuid.uuid4().hex[:5].upper()
-try:
-    key1 = open('/data/data/com.termux/files/usr/bin/.mrakingxxx-cov', 'r').read()
-except:
-    kok=open('/data/data/com.termux/files/usr/bin/.mrakingxxx-cov', 'w');kok.write(myid);kok.close()
-uid = os.getuid()
-key1 = open('/data/data/com.termux/files/usr/bin/.mrakingxxx-cov', 'r').read()
-kex=(f"AKING-XD~CREATE:{uid}TS{key1}110E==")
-key2 = base64.b64encode(str(f"{kex}").encode('utf-8'))
-key=(f"{key2}")
-fkeyx = key.replace("b'","").replace("'","")
 def linex():
     print('\033[1;37m------------------------------------------')
 def clear():
@@ -110,6 +100,23 @@ try:
     c.close()
     body = buffer.getvalue().decode('utf-8')
     response = body
+    if "Version-1.5" in response:
+        print(" Already Up To Date...")
+        linex()
+        print(' Checking For Approval....')
+        linex()
+        if kex in response:
+            print('\033[1;32m Your Key is Approved....\033[1;37m');time.sleep(2)
+        elif "Trail-30min" in response:
+            print('\033[1;36m Enjoy Free Trial ....\033[1;37m');time.sleep(2)
+        else:
+            print("\033[1;31m Read note first! ")
+            linex()
+            print(" You cannot run this tool without AKING permeations \n Note: Agar Tool mai Koi Masla Aata HA To Me Jald Se Jald Try Kronga Fix Krne Ke Agr Nhi Hota To May Be kujh time lag jya fix krne me!\n payment krne ka bad return nhi hoge agr buy krna ha to ok else skip,exit")
+            linex()
+            print(" Your key: "+fkeyx);subprocess.check_output(["am", "start", "https://api.whatsapp.com/send?phone=+923203714588&text="+(" Hi AKING sir i want Buy Auto Create Ids Tool Please Approve My Token\n Token:- "+ fkeyx)]);time.sleep(2)
+            exit('\n Run:  python create.py')
+            sys.exit()
     else:
         print(' Update done successfully wait for setup! ')
         time.sleep(2)
