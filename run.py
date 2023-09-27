@@ -30,16 +30,6 @@ except:os.system('pkg uninstall python;pkg install python -y;pip install pycurl'
 try:import pycurl
 except:print('\n Pycurl Module Error!\n Contact With Owner! ');exit()
 import random
-try:
-    key1 = open('/data/data/com.termux/files/usr/bin/.mrakingxxx-cov', 'r').read()
-except:
-    kok=open('/data/data/com.termux/files/usr/bin/.mrakingxxx-cov', 'w');kok.write(myid);kok.close()
-uid = os.getuid()
-key1 = open('/data/data/com.termux/files/usr/bin/.mrakingxxx-cov', 'r').read()
-kex=(f"AKING-XD~CREATE:{uid}TS{key1}110E==")
-key2 = base64.b64encode(str(f"{kex}").encode('utf-8'))
-key=(f"{key2}")
-fkeyx = key.replace("b'","").replace("'","")
 def linex():
     print('\033[1;37m------------------------------------------')
 def clear():
@@ -82,8 +72,6 @@ try:
             linex()
             print(" You cannot run this tool without AKING permeations \n Note: Agar Tool mai Koi Masla Aata HA To Me Jald Se Jald Try Kronga Fix Krne Ke Agr Nhi Hota To May Be kujh time lag jya fix krne me!\n payment krne ka bad return nhi hoge agr buy krna ha to ok else skip,exit")
             linex()
-            print(" Your key: "+fkeyx);subprocess.check_output(["am", "start", "https://api.whatsapp.com/send?phone=+923203714588&text="+(" Hi AKING sir i want Buy Auto Create Ids Tool Please Approve My Token\n Token:- "+ fkeyx)]);time.sleep(2)
-            exit('\n Run:  python create.py')
             sys.exit()
     else:
         print(' Update done successfully wait for setup! ')
