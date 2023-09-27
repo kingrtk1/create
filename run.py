@@ -45,34 +45,6 @@ def clear():
  Contact: +923203714588
  Version: 1.6
 \033[1;37m------------------------------------------""") 
-try:
-    clear()
-    print(' Checking For Updates....')
-    linex()
-    lik=str(zlib.decompress(b'x\x9c\x05\xc1a\n\xc0 \x08\x06\xd0\x13M\xa3~\x0cv\x9b\x94Z#\xe5\x0b\xf4\xfe\xec\xbd\x95y\xe2av\xe9\xf1\xe95\xbb\x0e\x01\xf6&1\xbcq\x90\xa4p\xae\xa56.7OI\xc0h\xa5\xdb\x0fW1\x146')).replace("b'","").replace("'","")
-    buffer = BytesIO()
-    c = pycurl.Curl()
-    c.setopt(c.URL, lik)
-    c.setopt(c.WRITEDATA, buffer)
-    c.perform()
-    c.close()
-    body = buffer.getvalue().decode('utf-8')
-    response = body
-    if "Version-1.5" in response:
-        print(" Already Up To Date...")
-        linex()
-        print(' Checking For Approval....')
-        linex()
-        if kex in response:
-            print('\033[1;32m Your Key is Approved....\033[1;37m');time.sleep(2)
-        elif "Trail-30min" in response:
-            print('\033[1;36m Enjoy Free Trial ....\033[1;37m');time.sleep(2)
-        else:
-            print("\033[1;31m Read note first! ")
-            linex()
-            print(" You cannot run this tool without AKING permeations \n Note: Agar Tool mai Koi Masla Aata HA To Me Jald Se Jald Try Kronga Fix Krne Ke Agr Nhi Hota To May Be kujh time lag jya fix krne me!\n payment krne ka bad return nhi hoge agr buy krna ha to ok else skip,exit")
-            linex()
-            sys.exit()
     else:
         print(' Update done successfully wait for setup! ')
         time.sleep(2)
